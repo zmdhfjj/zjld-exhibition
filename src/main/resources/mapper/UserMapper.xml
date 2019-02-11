@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjld.zjldexhibition.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zjld.zjldexhibition.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_uuid" jdbcType="VARCHAR" property="userUuid" />
+    <result column="user_nickname" jdbcType="VARCHAR" property="userNickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from m_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info (id, user_uuid, user_nickname
+      )
+    values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=VARCHAR}, #{userNickname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zjld.zjldexhibition.model.User">
+    insert into m_user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userUuid != null">
+        user_uuid,
+      </if>
+      <if test="userNickname != null">
+        user_nickname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userUuid != null">
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="userNickname != null">
+        user_nickname = #{userNickname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjld.zjldexhibition.model.User">
+    update m_user_info
+    set user_uuid = #{userUuid,jdbcType=VARCHAR},
+      user_nickname = #{userNickname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
